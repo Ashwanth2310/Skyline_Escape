@@ -55,7 +55,7 @@ function play(){
                 if(planeProps.left < buildingProps.left + buildingProps.width && planeProps.left + planeProps.width > buildingProps.left && planeProps.top < buildingProps.top + buildingProps.height && planeProps.top + planeProps.height > buildingProps.top){
                     gameState = 'End';
                     planeImage.style.display = 'none';
-                    window.location.href = 'Lose Screen.html';
+                    location.href = './LoseScreen.html';
                     return;
                 }else{
                     if(buildingProps.right < planeProps.left && buildingProps.right + moveSpeed >= planeProps.left && element.increaseScore == '1'){
