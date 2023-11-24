@@ -1,0 +1,72 @@
+a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+a:visited{
+  color: rgb(0, 0, 0);
+}
+.flexing {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  @media screen and (min-width: 1000px) {
+    .flexing {
+      flex-direction: row;
+    }
+  }
+  
+  .section {
+    flex: 1;
+    position: relative;
+    transition: 0.5s ease;
+  }
+  
+  .section--easy {
+    /* background-image: url("/baby.png"); */
+    background-color: #b7ec88;
+  }
+  
+  .section--normie {
+    /* background-image: url("/skyline_plane.jpg"); */
+    background-color:rgb(80, 87, 87)
+  }
+  
+  .section--hard {
+    background-color: #e36254;
+  }
+  
+  .section:hover,
+  .section:active,
+  .section:focus {
+    flex: 3;
+  }
+  
+  .section:hover .title {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  
+  @media screen and (min-width: 1000px) {
+    .section:hover .title {
+      transform: translate(-50%, -50%) scale(1.25);
+    }
+  }
+  
+  .section .title {
+    font-family: "Fredoka One";
+    font-size: 5rem;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease;
+  }
+  
+  @media screen and (min-width: 1000px) {
+    .section .title {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+  
