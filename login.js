@@ -4,7 +4,7 @@ function redirectToInstructions() {
 
     if (nameInput.value && nicknameInput.value) {
         // Both fields are filled, proceed to the other webpage
-        window.location.href = '../Instructions.html'; 
+        window.location.href = './Instructions.html'; 
     } else {
         alert('✈️ Please enter your Name and Nickname to play ✈️');
     }
