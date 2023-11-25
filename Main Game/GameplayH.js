@@ -3,8 +3,8 @@ let moveSpeed = 3, gravity = 0.5;
 let plane = document.querySelector('.plane');
 let planeImage = document.getElementById('planes');
 const plane_s = new Audio("Airliner.mp3");
-
-
+plane_s.loop = true;
+const crash = new Audio("crash.mp3")
 // Preloading the plane image as there was bug which wouldnt show the image of the plane immediately
 const preloadImage = new Image();
 preloadImage.src = 'plane.png';
@@ -59,6 +59,7 @@ function play(){
                 element.remove();
             }else{
                 if(planeProps.left < buildingProps.left + buildingProps.width && planeProps.left + planeProps.width > buildingProps.left && planeProps.top < buildingProps.top + buildingProps.height && planeProps.top + planeProps.height > buildingProps.top){
+                    crash.play();
                     gameState = 'End';
                     planeImage.style.display = 'none';
                     location.href = './LoseScreen.html';
