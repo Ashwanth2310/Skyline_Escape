@@ -111,7 +111,7 @@ function play(){
         if(gameState != 'Play') return;
 
         if(buildingSeparation > 115){
-            buildingSeparation = 45;
+            buildingSeparation = 20;
 
             let buildingPos = Math.floor(Math.random() * 43) + 8;
             let buildingSpriteInv = document.createElement('div');
