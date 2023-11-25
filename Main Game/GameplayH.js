@@ -2,6 +2,7 @@
 let moveSpeed = 3, gravity = 0.5;
 let plane = document.querySelector('.plane');
 let planeImage = document.getElementById('planes');
+const plane_s = new Audio("Airliner.mp3");
 
 
 // Preloading the plane image as there was bug which wouldnt show the image of the plane immediately
@@ -45,6 +46,7 @@ document.addEventListener('keydown', (e) => {
 
 //Function to start platying the game
 function play(){
+    plane_s.play();
     function move(){
         if(gameState != 'Play') return;
 
