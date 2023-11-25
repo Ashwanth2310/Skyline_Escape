@@ -176,4 +176,9 @@ html {
       bottom: 100%;
     }
   }
+  @media (max-width: 600px) {
+    .login-box {
+        width: 80%;
+    }
+  }
   

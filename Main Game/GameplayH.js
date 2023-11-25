@@ -1,7 +1,10 @@
+// Variables for plane movement and gravity
 let moveSpeed = 3, gravity = 0.5;
 let plane = document.querySelector('.plane');
 let planeImage = document.getElementById('planes');
 
+
+// Preloading the plane image as there was bug which wouldnt show the image of the plane immediately
 const preloadImage = new Image();
 preloadImage.src = 'plane.png';
 
@@ -40,6 +43,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+//Function to start platying the game
 function play(){
     function move(){
         if(gameState != 'Play') return;

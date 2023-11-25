@@ -1,7 +1,12 @@
+
+// Variables for plane movement and gravity
 let moveSpeed = 3, gravity = 0.5;
+
+// Selecting the plane and plane image elements
 let plane = document.querySelector('.plane');
 let planeImage = document.getElementById('planes');
 
+// Preloading the plane image as there was bug which wouldnt show the image of the plane immediately
 const preloadImage = new Image();
 preloadImage.src = 'plane.png';
 
@@ -24,7 +29,6 @@ planeImage.style.display = 'none';
 message.classList.add('promptStyle');
 
 document.addEventListener('keydown', (e) => {
-    
     if(e.key == 'Enter' && gameState != 'Play'){
         document.querySelectorAll('.building').forEach((e) => {
             e.remove();
@@ -40,6 +44,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+//Function to start platying the game
 function play(){
     function move(){
         if(gameState != 'Play') return;
@@ -129,3 +134,4 @@ function play(){
     }
     requestAnimationFrame(createBuilding);
 }
+
